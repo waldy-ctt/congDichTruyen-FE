@@ -1,19 +1,35 @@
-import logo from "Assets/CongDichTruyenLogo.jpg";
+import Header from "src/components/header/Header";
 
 export default function App() {
   return (
     <>
       <div className="">
-        <div className="flex">
-          {/* this is the top */}
-          <img src={logo} alt="logo" className="w-20 rounded-lg" />
-          <p>Cổng Dịch Truyện</p>
-          <div className="">
-            <span className="background"></span>
-            <span className=""></span>
-            <span className=""></span>
-          </div>
+        <Header />
+        <div className="">
+          {/* body */}
+          <MainViewBadge />
         </div>
+      </div>
+    </>
+  );
+}
+
+function MainViewBadge(){
+  return(
+    <>
+      <div className="w-screen bg-[#C9FBFF] h-60 mt-2">
+        <SearchBar />
+      </div>
+    </>
+  );
+}
+
+function SearchBar(){
+  return(
+    <>
+      <div className="w-72 mx-auto pt-32">
+        <input type="search" name="search" id="search" className="w-72 bg-slate-50 rounded-lg border-black border-2 h-9" />
+        
       </div>
     </>
   );
